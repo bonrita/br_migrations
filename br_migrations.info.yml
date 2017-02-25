@@ -1,0 +1,8 @@
+name: Br Migrations
+type: module
+description: Migrations for Br Project from product XMLs
+core: 8.x
+package: custom
+dependencies:
+  - migrate_tools
+  - migrate_plus

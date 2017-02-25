@@ -1,0 +1,285 @@
+langcode: nl
+status: true
+dependencies: {  }
+id: product_displays_nl
+migration_tags: null
+migration_group: product_displays
+label: 'Import Netherlands product displays'
+source:
+  plugin: url
+  data_fetcher_plugin: xml_dir_concat
+  data_parser_plugin: br_simple_xml
+  urls: /../ImportProducts/Stage1/nl
+  item_selector: /items/Product
+  fields:
+    -
+      name: file_name
+      label: 'File Name'
+      selector: FileName
+    -
+      name: type
+      label: Type
+      selector: Type
+    -
+      name: title
+      label: title
+      selector: Metadata/Title
+    -
+      name: Description
+      label: Description
+      selector: Metadata/Description
+    -
+      name: keywords
+      label: Keywords
+      selector: Metadata/Keywords
+    -
+      name: br_code
+      label: 'Br Code'
+      selector: BasicInfo/Codes/BRcode
+    -
+      name: DCode
+      label: DCode
+      selector: BasicInfo/Codes/DCode
+    -
+      name: Source
+      label: Source
+      selector: BasicInfo/Codes/Source
+    -
+      name: MajorHeadingLine
+      label: MajorHeadingLine
+      selector: BasicInfo/Details/MajorHeadingLine
+    -
+      name: MinorHeadingLine
+      label: MinorHeadingLine
+      selector: BasicInfo/Details/MinorHeadingLine
+    -
+      name: DetailsDescription
+      label: Description
+      selector: BasicInfo/Details/Description
+    -
+      name: MetaKeywords
+      label: MetaKeywords
+      selector: BasicInfo/Details/MetaKeywords
+    -
+      name: ExternalLength
+      label: ExternalLength
+      selector: Dimensions/Numbers/ExternalLength
+    -
+      name: ExternalWidth
+      label: ExternalWidth
+      selector: Dimensions/Numbers/ExternalWidth
+    -
+      name: ExternalHeight
+      label: ExternalHeight
+      selector: Dimensions/Numbers/ExternalHeight
+    -
+      name: InternalLength
+      label: InternalLength
+      selector: Dimensions/Numbers/InternalLength
+    -
+      name: InternalWidth
+      label: InternalWidth
+      selector: Dimensions/Numbers/InternalWidth
+    -
+      name: InternalHeight
+      label: InternalHeight
+      selector: Dimensions/Numbers/InternalHeight
+    -
+      name: FoldedLength
+      label: FoldedLength
+      selector: Dimensions/Numbers/FoldedLength
+    -
+      name: FoldedWidth
+      label: FoldedWidth
+      selector: Dimensions/Numbers/FoldedWidth
+    -
+      name: FoldedHeight
+      label: FoldedHeight
+      selector: Dimensions/Numbers/FoldedHeight
+    -
+      name: LidLength
+      label: LidLength
+      selector: Dimensions/Numbers/LidLength
+    -
+      name: LidWidth
+      label: LidWidth
+      selector: Dimensions/Numbers/LidWidth
+    -
+      name: LidHeight
+      label: LidHeight
+      selector: Dimensions/Numbers/LidHeight
+    -
+      name: DimComments
+      label: 'Dimension Comments'
+      selector: Dimensions/Comments/Text
+    -
+      name: LongWidth
+      label: LongWidth
+      selector: Window/Numbers/LongWidth
+    -
+      name: LongHeight
+      label: LongHeight
+      selector: Window/Numbers/LongHeight
+    -
+      name: ShortWidth
+      label: ShortWidth
+      selector: Window/Numbers/ShortWidth
+    -
+      name: ShortHeight
+      label: ShortHeight
+      selector: Window/Numbers/ShortHeight
+    -
+      name: WindowComments
+      label: 'Window Comments'
+      selector: Window/Comments/Text
+    -
+      name: MaxVolume
+      label: MaxVolume
+      selector: Capacity/Numbers/MaxVolume
+    -
+      name: MaxLoad
+      label: MaxLoad
+      selector: Capacity/Numbers/MaxLoad
+    -
+      name: Tare
+      label: Tare
+      selector: Capacity/Numbers/Tare
+    -
+      name: DisplayCubic
+      label: DisplayCubic
+      selector: Capacity/Numbers/DisplayCubic
+    -
+      name: DisplayUS
+      label: DisplayUS
+      selector: Capacity/Numbers/DisplayUS
+    -
+      name: CapacityComments
+      label: Text
+      selector: Capacity/Comments/Text
+    -
+      name: TemperatureMin
+      label: Min
+      selector: Temperature/Numbers/Min
+    -
+      name: TemperatureMax
+      label: Max
+      selector: Temperature/Numbers/Max
+    -
+      name: TemperatureComments
+      label: 'Temperature Comments'
+      selector: Temperature/Comments/Text
+    -
+      name: PerLayer
+      label: PerLayer
+      selector: Configuration/Numbers/PerLayer
+    -
+      name: TransitLoaded
+      label: TransitLoaded
+      selector: Configuration/Numbers/TransitLoaded
+    -
+      name: TransitEmpty
+      label: TransitEmpty
+      selector: Configuration/Numbers/TransitEmpty
+    -
+      name: StaticLoaded
+      label: StaticLoaded
+      selector: Configuration/Numbers/StaticLoaded
+    -
+      name: StaticEmpty
+      label: StaticEmpty
+      selector: Configuration/Numbers/StaticEmpty
+    -
+      name: ConfigComments
+      label: 'Configuration Comments'
+      selector: Configuration/Comments/Text
+    -
+      name: ReturnRatio
+      label: ReturnRatio
+      selector: Configuration/Numbers/ReturnRatio
+    -
+      name: ProductCategory
+      label: ProductCategory
+      selector: AdditionalInfo/Filters/ProductCategory
+    -
+      name: ProductSubCategory
+      label: ProductSubCategory
+      selector: AdditionalInfo/Filters/ProductSubCategory
+    -
+      name: America
+      label: America
+      selector: AdditionalInfo/Filters/Countries/America
+    -
+      name: APac
+      label: APac
+      selector: AdditionalInfo/Filters/Countries/APac
+    -
+      name: Europe
+      label: Europe
+      selector: AdditionalInfo/Filters/Countries/Europe
+    -
+      name: MEA
+      label: MEA
+      selector: AdditionalInfo/Filters/Countries/MEA
+    -
+      name: Unit
+      label: Unit
+      selector: AdditionalInfo/Filters/Unit
+    -
+      name: Materials
+      label: Materials
+      selector: AdditionalInfo/Details/Materials
+    -
+      name: Handling
+      label: Handling
+      selector: AdditionalInfo/Details/Handling
+    -
+      name: Features
+      label: Features
+      selector: BasicInfo/Details/Features
+    -
+      name: Overview
+      label: Overview
+      selector: BasicInfo/Details/Overview
+    -
+      name: Performance
+      label: Performance
+      selector: AdditionalInfo/Details/Performance
+    -
+      name: Applications
+      label: Applications
+      selector: AdditionalInfo/Details/Applications
+    -
+      name: Accessories
+      label: Accessories
+      selector: AdditionalInfo/Details/Accessories
+    -
+      name: CommentaryHeading
+      label: CommentaryHeading
+      selector: AdditionalInfo/Details/CommentaryHeading
+    -
+      name: CommentaryDisplay
+      label: CommentaryDisplay
+      selector: AdditionalInfo/Details/CommentaryDisplay
+  ids:
+    file_name:
+      type: string
+process:
+  title: title
+  field__product:
+    plugin: migration
+    source: file_name
+    migration: products_nl
+  type:
+    plugin: default_value
+    default_value: product_page
+  langcode:
+    plugin: default_value
+    default_value: nl
+  field_domain_access:
+    plugin: default_value
+    default_value: country_nl
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - products_base
